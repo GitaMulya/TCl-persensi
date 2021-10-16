@@ -20,7 +20,9 @@ use App\Http\Controllers\PersensiController;
 // });
 Route::get('/', [MembersController::class, 'index']);
 Route::get('/create', [MembersController::class, 'create']);
-Route::post('/', [MembersController::class, 'store']);//INSERT DATA
+Route::post('/', [MembersController::class, 'store']); //INSERT DATA
 
 Route::get('/persensi',[PersensiController::class, 'index']);
+Route::get('/persensi/create', [PersensiController::class, 'create']);
+Route::post('/persensi',[PersensiController::class, 'store']); //INSERT DATA
 Route::get('/{id}/delete', [MembersController::class, 'delete']);
