@@ -15,8 +15,9 @@ class MembersController extends Controller
      */
     public function index()
     {
-        $members = Member::all();
-        return view('members.index');
+        $data = Member::all();
+        return view('members.index')// teruh blade disini
+        ->with("data", $data);
     }
 
     /**
@@ -26,7 +27,7 @@ class MembersController extends Controller
      */
     public function create()
     {
-        //
+        return view('member.create');
     }
 
     /**
@@ -37,7 +38,22 @@ class MembersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama'=> 'required',
+            'jKelamin'=> 'required',
+            'umur'=> 'required'
+        ],
+        [
+            'nama.required'=>'nama Wajib Diisi!',
+            'jKelamin.required'=>'nama Wajib Diisi!',
+            'umur.required'=>'nama Wajib Diisi!'
+        ]);
+        Member::create([
+            'nama' => $request->nama,
+            'jKelamin' => $request->jKelamin,
+            'umur' => $request->umur
+        ]);
+        return redirect('/')->with('status', 'Data Berhasil Ditambahkan');
     }
 
     /**
