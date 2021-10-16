@@ -28,6 +28,7 @@
                                         <th scope="col">nama</th>
                                         <th scope="col">jenis kelamin</th>
                                         <th scope="col">usia</th>
+                                        <th scope="col">kehadiran</th>
                                         <th scope="col">aksi</th>
                                     </tr>
                                 </thead>
@@ -38,6 +39,7 @@
                                             <td>{{ $member->nama }}</td>
                                             <td>{{ $member->jKelamin}}</td>
                                             <td>{{ $member->umur }}</td>
+                                            <td>{{ $member->count }}</td>
                                             <td>
                                                 <a href="/{{$member->member_id}}/edit" class="btn btn-outline-success btn-sm mr-2">Edit</a>
                                                 <a href="/{{$member->member_id}}/delete" class="btn btn-outline-danger btn-sm" id="btn-hapus">Hapus</a>

@@ -29,11 +29,11 @@ class PersensiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    // public function create()
-    // {
-    //     //
-    //     return view();// teruh blade disini
-    // }
+    public function create($id)
+    {
+        //
+        return view();// teruh blade disini
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -43,20 +43,25 @@ class PersensiController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        $message = [
-            'required' => 'kolom harus diisi',
-        ];
-        $validation = $request->validate([
-            'id_event' => 'required',
-            'id_member' => 'required',
-            'onTime' => 'required'
-        ], $message);
+        // //
+        // $message = [
+        //     'required' => 'kolom harus diisi',
+        // ];
+        // $request->validate([
+        //     'id_event' => 'required',
+        //     'id_member' => 'required'
+            
+        // ], $message);
 
         DB::beginTransaction();
-        Persensi::create($validation);
+        Persensi::create([
+            'id_event' => $request->id_event,
+            'id_member' => $request->id_member,
+            
+        ]);
         $member = Member::find($request->id_member);
         $member->count =$member->count + 1;
+        $member->save();  
         DB::commit();
         return redirect('/')->with('success', 'data berhasil di simpan');
     }
