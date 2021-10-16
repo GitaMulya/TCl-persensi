@@ -20,3 +20,4 @@ use App\Http\Controllers\MembersController;
 Route::get('/', [MembersController::class, 'index']);
 Route::get('/create', [MembersController::class, 'create']);
 Route::post('/', [MembersController::class, 'store']);//INSERT DATA
+Route::get('/{id}/delete', [MembersController::class, 'delete']);

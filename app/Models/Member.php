@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Member extends Model
 {
     protected $fillable =['nama', 'jKelamin', 'umur'];
-    
+    protected $primaryKey = 'member_id';
 }
