@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Persensi;
 
 use Illuminate\Http\Request;
 
@@ -14,6 +15,10 @@ class PersensiController extends Controller
     public function index()
     {
         //
+        $data = Persensi::all();
+        return view()// teruh blade disini
+        ->with("data", $data);
+    }
     }
 
     /**
@@ -24,6 +29,7 @@ class PersensiController extends Controller
     public function create()
     {
         //
+        return view()// teruh blade disini
     }
 
     /**
@@ -43,10 +49,10 @@ class PersensiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+    // public function show($id)
+    // {
+    //     //
+    // }
 
     /**
      * Show the form for editing the specified resource.
@@ -54,10 +60,10 @@ class PersensiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
-    }
+    // public function edit($id)
+    // {
+    //     //
+    // }
 
     /**
      * Update the specified resource in storage.
@@ -66,10 +72,10 @@ class PersensiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+    // public function update(Request $request, $id)
+    // {
+    //     //
+    // }
 
     /**
      * Remove the specified resource from storage.
