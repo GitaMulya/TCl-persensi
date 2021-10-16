@@ -122,6 +122,15 @@
               </p>
             </a>
           </li>
+
+          <li class="menu-open" style="color:rebeccapurple">
+            <a href="/persensi" class="nav-link active">
+              <i class="nav-icon fas fa-users" style="color:white"></i>
+              <p>
+                persensi
+              </p>
+            </a>
+          </li>
         </ul>    
     </div>
     <!-- /.sidebar -->

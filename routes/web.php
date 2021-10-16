@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MembersController;
+use App\Http\Controllers\PersensiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,5 @@ use App\Http\Controllers\MembersController;
 Route::get('/', [MembersController::class, 'index']);
 Route::get('/create', [MembersController::class, 'create']);
 Route::post('/', [MembersController::class, 'store']);//INSERT DATA
+
+Route::get('/persensi',[PersensiController::class, 'index']);
