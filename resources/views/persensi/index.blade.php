@@ -32,12 +32,12 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($data as $member) 
+                                    @foreach ($data as $persensi) 
                                         <tr>
                                             <td scope="row">{{ $loop->iteration}}</td>
-                                            <td>{{ $member->nama }}</td>
-                                            <td>{{ $member->jKelamin}}</td>
-                                            <td>{{ $member->umur }}</td>
+                                            <td>{{ $persensi->nama }}</td>
+                                            <td>{{ $persensi->jKelamin}}</td>
+                                            <td>{{ $persensi->umur }}</td>
                                             <td>
                                                 <a href="/{{$member->member_id}}/edit" class="btn btn-outline-success btn-sm mr-2">Edit</a>
                                                 <a href="/{{$member->member_id}}/delete" class="btn btn-outline-danger btn-sm" id="btn-hapus">Hapus</a>

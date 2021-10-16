@@ -21,9 +21,6 @@ use App\Http\Controllers\PersensiController;
 Route::get('/', [MembersController::class, 'index']);
 Route::get('/create', [MembersController::class, 'create']);
 Route::post('/', [MembersController::class, 'store']);//INSERT DATA
-<<<<<<< HEAD
 
 Route::get('/persensi',[PersensiController::class, 'index']);
-=======
 Route::get('/{id}/delete', [MembersController::class, 'delete']);
->>>>>>> e99316f9411a7670c6e0ea7e372130713707b0b8
