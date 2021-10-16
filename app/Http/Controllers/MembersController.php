@@ -96,8 +96,10 @@ class MembersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+        $data = Member::find($id);
+        $data->delete();
+        return redirect('/')->with('status', 'Data Berhasil Dihapus');
     }
 }
