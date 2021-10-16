@@ -17,7 +17,7 @@ class CreatePersensisTable extends Migration
             $table->id("pre_id");
             $table->integer("id_event");
             $table->integer("id_member");
-            $table->boolean("onTime");
+            $table->boolean("onTime")->default(true);
             $table->timestamps();
         });
     }

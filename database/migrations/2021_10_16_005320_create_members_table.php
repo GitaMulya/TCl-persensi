@@ -18,6 +18,7 @@ class CreateMembersTable extends Migration
             $table->string("nama");
             $table->string("jKelamin");
             $table->integer("umur");
+            $table->integer("count")->default(0);
             $table->timestamps();
         });
     }
