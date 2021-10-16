@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Persensi extends Model
 {
-    use HasFactory;
+    protected $fillable =['id_event', 'id_member', 'onTime'];
 }
