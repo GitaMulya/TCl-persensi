@@ -18,3 +18,5 @@ use App\Http\Controllers\MembersController;
 //     return view('welcome');
 // });
 Route::get('/', [MembersController::class, 'index']);
+Route::get('/create', [MembersController::class, 'create']);
+Route::post('/', [MembersController::class, 'store']);//INSERT DATA
